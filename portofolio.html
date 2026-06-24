@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyek Saya - Fahrel Fasyahabie</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Nav (shared style with index) -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <a href="index.html" class="logo">FF</a>
+        <span class="site-name">Fahrel Fasyahabie</span>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button id="navTogglePortfolio" class="nav-toggle" aria-label="Buka navigasi">☰</button>
+
+      <nav id="mainNavPortfolio" class="nav" aria-label="Main navigation">
+        <a href="index.html">Tentang Saya</a>
+        <a href="portfolio.html" class="active">Proyek Saya</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main container: sidebar + content -->
+  <main class="container" style="padding-top:22px; padding-bottom:28px;">
+    <div class="card" style="padding:14px;">
+      <header style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px;">
+        <div>
+          <h1 style="margin-bottom:4px;">Galeri Proyek</h1>
+          <p class="lead" style="margin:0;">Kumpulan proyek hardcoded — klik "Lihat detail" untuk membuka modal.</p>
+        </div>
+
+        <!-- quick controls: search + sort -->
+        <div style="display:flex; gap:8px; align-items:center;">
+          <input id="searchInput" type="search" placeholder="Cari proyek (judul / teknologi)..." class="input" style="min-width:220px;">
+          <select id="sortSelect" class="input" aria-label="Urutkan proyek">
+            <option value="default">Urutkan: Default</option>
+            <option value="az">Nama A → Z</option>
+            <option value="za">Nama Z → A</option>
+            <option value="new">Terbaru (manual)</option>
+          </select>
+        </div>
+      </header>
+
+      <div style="display:grid; grid-template-columns: 260px 1fr; gap:18px;">
+        <!-- SIDEBAR: kategori & timeline -->
+        <aside aria-label="Filter dan kategori" style="min-width:220px;">
+          <section class="card" style="margin-bottom:14px;">
+            <h2 style="font-size:1rem; margin-bottom:8px;">Kategori Proyek</h2>
+            <p class="small" style="margin-bottom:8px; color:var(--muted);">Pilih untuk memfilter</p>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <button class="filter-btn" data-filter="all">Semua</button>
+              <button class="filter-btn" data-filter="web">Web</button>
+              <button class="filter-btn" data-filter="mobile">Mobile</button>
+              <button class="filter-btn" data-filter="uiux">UI/UX</button>
+              <button class="filter-btn" data-filter="game">Game</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2 style="font-size:1rem; margin-bottom:8px;">Timeline</h2>
+            <ol style="margin-top:6px; color:var(--muted);">
+              <li style="margin-bottom:8px;"><strong>2025</strong> — Proyek Landing Page Event</li>
+              <li style="margin-bottom:8px;"><strong>2024</strong> — Aplikasi ToDo (JS)</li>
+              <li style="margin-bottom:8px;"><strong>2023</strong> — Website Profile Sekolah</li>
+            </ol>
+          </section>
+        </aside>
+
+        <!-- CONTENT: projects grid -->
+        <section aria-label="Daftar proyek">
+          <div class="projects-grid" id="projectsGrid">
+            <!-- PROJECT 1 -->
+            <article class="project-card" data-title="Website Profile Sekolah" data-category="web" data-tech="HTML CSS">
+              <figure>
+                <img src="images/image.png" alt="Thumbnail Website Profile Sekolah" class="proj-thumb">
+                <figcaption style="padding:10px;">
+                  <h3 style="margin-bottom:6px;">Website Profile Sekolah</h3>
+                  <p class="small" style="margin-bottom:8px; color:var(--muted);">Website statis responsif untuk profil sekolah, galeri, dan berita singkat.</p>
+                  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                    <span class="badge">Responsive</span>
+                  </div>
+
+                  <div style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+                    <button class="btn-detail" data-title="Website Profile Sekolah" data-desc="Website statis responsive yang menampilkan profil sekolah, galeri, dan berita. Dibuat menggunakan HTML & CSS — fokus pada semantik dan RWD." data-img="images/proj1.jpg">Lihat detail</button>
+                    <a href="#" class="btn" aria-label="Demo Website Profile Sekolah">Demo</a>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+
+            <!-- PROJECT 2 -->
+            <article class="project-card" data-title="Aplikasi ToDo sederhana" data-category="web" data-tech="JavaScript localStorage">
+              <figure>
+                <img src="images/todo.jpg" alt="Thumbnail Aplikasi ToDo" class="proj-thumb">
+                <figcaption style="padding:10px;">
+                  <h3 style="margin-bottom:6px;">Aplikasi ToDo sederhana</h3>
+                  <p class="small" style="margin-bottom:8px; color:var(--muted);">CRUD ToDo dengan penyimpanan lokal (localStorage) — dasar JS untuk interaktivitas.</p>
+                  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">localStorage</span>
+                  </div>
+
+                  <div style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+                    <button class="btn-detail" data-title="Aplikasi ToDo sederhana" data-desc="Aplikasi ToDo kecil yang mendemokan operasi tambah, hapus, tandai selesai, dan simpan ke localStorage." data-img="images/proj2.jpg">Lihat detail</button>
+                    <a href="#" class="btn">Demo</a>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+
+            <!-- PROJECT 3 -->
+            <article class="project-card" data-title="Landing Page Event" data-category="web" data-tech="HTML CSS Grid">
+              <figure>
+                <img src="images/landing.jpg" alt="Thumbnail Landing Page Event" class="proj-thumb">
+                <figcaption style="padding:10px;">
+                  <h3 style="margin-bottom:6px;">Landing Page Event</h3>
+                  <p class="small" style="margin-bottom:8px; color:var(--muted);">Landing page resp
